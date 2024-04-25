@@ -19,104 +19,104 @@ public class WeatherAndMathUtilsTest {
 	
 	@Test
 	public void testWindSpeedExceedsdangerouslimit() {
-	    Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(71.0, 3.0)); // Wind speed exceeds dangerous limit
+	    Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(71.0, 3.0)); 
 	}
 	
 	@Test
 	public void testWindSpeedExceedsdangerouslimitandRainfallzero() {
-	    Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(71.0, 0.0)); // Wind speed exceeds dangerous limit
+	    Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(71.0, 0.0)); 
 	}
 	
 	@Test
 	public void testRainfallExceedsdangerouslimitandWindspeedzero() {
-	    Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(0.0, 6.5)); // Wind speed exceeds dangerous limit
+	    Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(0.0, 6.5)); 
 	}
 	
 	
 	@Test
     public void testWindSpeedandRainfallExceedsConcerninglimit() {
-        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(61.0, 5.0)); // Wind speed and precipitation exceeds concerning limit
+        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(61.0, 5.0)); 
     }
 
     @Test
     public void testRainfallExceedsDangerousLimit() {
-        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(44.0, 6.1)); // Rainfall exceeds dangerous limit
+        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(44.0, 6.1)); 
     }
     
     @Test
     public void testWindSpeedAndRainfallExceedsDangerousLimit() {
-        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(71.0, 7.0)); // Wind speed and rainfall both exceed dangerous limits
+        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(71.0, 7.0)); 
     }
     
     @Test
     public void testWindSpeedExceedsDangerousAndRainfallExceedsConcerningLimit() {
-        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(72.0, 5.0)); // Wind speed and rainfall both exceed dangerous limits
+        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(72.0, 5.0)); 
     }
     
     @Test
     public void testWindSpeedExceedsConcerningAndRainfallExceedsDangerousLimit() {
-        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(48.0, 8.0)); // Wind speed and rainfall both exceed dangerous limits
+        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(48.0, 8.0)); 
     }
     
     @Test
     public void testWindSpeedExceedsConcerningLimit() {
-        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(55.0, 4.1)); // Wind speed and rainfall both exceed dangerous limits
+        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(55.0, 4.1)); 
     }
     
     @Test
     public void testRainfallexceedsConcerningLimit() {
-        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(45.1, 5.0)); // Wind speed and rainfall both exceed dangerous limits
+        Assert.assertEquals("CANCEL", WeatherAndMathUtils.weatherAdvice(45.1, 5.0)); 
     }
 
 	@Test
 	public void testWarnWindspeedexceedConcerningwindspeed() {
-	    Assert.assertEquals("WARN", WeatherAndMathUtils.weatherAdvice(50.0, 3.0)); // Testing warn scenario
+	    Assert.assertEquals("WARN", WeatherAndMathUtils.weatherAdvice(50.0, 3.0)); 
 	}
 	
 	
 	@Test
     public void testWarnWindspeedexceedConcerningWindSpeedzeroRainfall() {
-        Assert.assertEquals("WARN", WeatherAndMathUtils.weatherAdvice(45.1, 0.0)); // Wind speed exceeds concerning limit
+        Assert.assertEquals("WARN", WeatherAndMathUtils.weatherAdvice(45.1, 0.0)); 
     }
 
     @Test
     public void testWarnRainfallExceedsconcerningrainfall() {
-        Assert.assertEquals("WARN", WeatherAndMathUtils.weatherAdvice(30.0, 4.1)); // Rainfall exceeds concerning limit
+        Assert.assertEquals("WARN", WeatherAndMathUtils.weatherAdvice(30.0, 4.1)); 
     }
 
     @Test
     public void testWarnWindspeedExceedsconcerninglimitandrainfallremainsatconcerningrainfall() {
-        Assert.assertEquals("WARN", WeatherAndMathUtils.weatherAdvice(46.0, 4.0)); // Rainfall exceeds concerning limit
+        Assert.assertEquals("WARN", WeatherAndMathUtils.weatherAdvice(46.0, 4.0)); 
     }
     
     @Test
     public void testWarnRainfallexceedsconcerningrainfallzerowindspeed() {
-        Assert.assertEquals("WARN", WeatherAndMathUtils.weatherAdvice(0.0, 4.5)); // Wind speed and rainfall both exceed concerning limits
+        Assert.assertEquals("WARN", WeatherAndMathUtils.weatherAdvice(0.0, 4.5)); 
     }
 
 	@Test
 	public void testAllClearWeather1() {
-	    Assert.assertEquals("ALL CLEAR", WeatherAndMathUtils.weatherAdvice(40.0, 2.0)); // Testing all clear scenario
+	    Assert.assertEquals("ALL CLEAR", WeatherAndMathUtils.weatherAdvice(40.0, 2.0)); 
 	} 
 	
 	@Test
 	public void testAllClearWeather2() {
-	    Assert.assertEquals("ALL CLEAR", WeatherAndMathUtils.weatherAdvice(0.0, 3.0)); // Testing all clear scenario
+	    Assert.assertEquals("ALL CLEAR", WeatherAndMathUtils.weatherAdvice(0.0, 3.0)); 
 	} 
 	
 	@Test
 	public void testAllClearWeather3() {
-	    Assert.assertEquals("ALL CLEAR", WeatherAndMathUtils.weatherAdvice(35.0, 0.0)); // Testing all clear scenario
+	    Assert.assertEquals("ALL CLEAR", WeatherAndMathUtils.weatherAdvice(35.0, 0.0)); 
 	} 
 
     @Test
     public void testAllClearWeather4() {
-        Assert.assertEquals("ALL CLEAR", WeatherAndMathUtils.weatherAdvice(30.0, 2.0)); // No dangerous or concerning conditions
+        Assert.assertEquals("ALL CLEAR", WeatherAndMathUtils.weatherAdvice(30.0, 2.0)); 
     }
     
     @Test
     public void testAllClearWeather5() {
-        Assert.assertEquals("ALL CLEAR", WeatherAndMathUtils.weatherAdvice(20.0, 1.0)); // No dangerous or concerning conditions
+        Assert.assertEquals("ALL CLEAR", WeatherAndMathUtils.weatherAdvice(20.0, 1.0)); 
     }
     
     @Test(expected = IllegalArgumentException.class)

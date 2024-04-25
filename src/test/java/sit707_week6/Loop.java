@@ -15,13 +15,13 @@ public class Loop {
 
         for (int i = 1; i <= n; i++) {
             if (i % 2 == 0) {
-                sumEven += i; // Add even numbers to sumEven variable
+                sumEven += i; 
             } else {
-                sumOdd += i; // Add odd numbers to sumOdd variable
+                sumOdd += i; 
             }
         }
 
-        return sumEven + sumOdd; // Return the sum of both even and odd numbers
+        return sumEven + sumOdd; 
     }
 
 }
