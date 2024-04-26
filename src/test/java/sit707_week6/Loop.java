@@ -23,5 +23,6 @@ public class Loop {
 
         return sumEven + sumOdd; 
     }
+	
 
 }
